@@ -23,7 +23,7 @@ public class ValidationTest {
 	
 	public static void validation(Demo demo){
 		
-		Validator validator   = Validation.buildDefaultValidatorFactory().getValidator();// 验证器
+		Validator validator = Validation.buildDefaultValidatorFactory().getValidator();// 验证器
 		
 		Set<ConstraintViolation<Demo>>  vios  = validator.validate(demo); // 验证
 		
@@ -40,13 +40,13 @@ public class ValidationTest {
 
 class Demo{
 	
-	@Min(value=10,message="数据必须>=10")
+	@Min(value = 10,message = "数据必须>=10")
 	private int min=20;
 	
-	@Max(value = 100,message="数据必须<=100")
+	@Max(value = 100,message = "数据必须<=100")
 	private int max;
 	
-	@Size(min=10,max=1000,message="数据范围为10--1000")
+	@Size(min = 10,max = 1000,message = "数据范围为10--1000")
 	private List size=new ArrayList();
 	
 	@NotNull(message="不能为空")
