@@ -8,7 +8,7 @@ public class Test {
 //		System.out.println(t & (0x1 << 1 ));
 //		System.out.println((t & (0x1 << 1 )) >> 1);
 		
-		
+		System.out.println(0x1 << 1);
 		new B("f");
 	}
 
