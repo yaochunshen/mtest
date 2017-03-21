@@ -17,7 +17,7 @@ public class ValidationTest {
 	public static void main(String [] agrs){
 		
 		Demo demo = new Demo();
-		
+		demo.setMax(200);
 		validation(demo);
 	}
 	
@@ -30,24 +30,19 @@ public class ValidationTest {
 		for(ConstraintViolation<Demo> vio:vios){
 			System.out.println(vio.getMessage());
 		}
-		
-		
 	}
-
 }
-
-
 
 class Demo{
 	
 	@Min(value = 10,message = "数据必须>=10")
-	private int min=20;
+	private int min = 20;
 	
 	@Max(value = 100,message = "数据必须<=100")
 	private int max;
 	
 	@Size(min = 10,max = 1000,message = "数据范围为10--1000")
-	private List size=new ArrayList();
+	private List size = new ArrayList();
 	
 	@NotNull(message="不能为空")
 	private String notNull;
